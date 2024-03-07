@@ -18,3 +18,8 @@ jobs:
       run: gcc -o main main.c
     - name: Run tests
       run: ./main
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: my-artifact
+        path: main
